@@ -193,6 +193,73 @@ public class conversor {
 
 		}
 
+		// si el usuario escoje conversor de moneda y De libras a pesos
+		if (opcionSeleccionado == "Conversor de moneda" && opcionConversion == "De libras a pesos") {
+
+			while (true) {
+				String monedaConvertir = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+				try {
+					double moneda = Double.parseDouble(monedaConvertir);
+
+					operaciones librasPesos = new operaciones(moneda);
+					double conversion = librasPesos.euroPesos(moneda);
+					JOptionPane.showMessageDialog(null,
+							"El valor es: " + String.format("%.3f", conversion) + " pesos colombianos");
+					JOptionPane.showMessageDialog(null, "Gracias hasta luego");
+					System.exit(0);
+					break;
+				} catch (NumberFormatException e) {
+					JOptionPane.showMessageDialog(null, "Valor no válido, ingrese un número válido.");
+				}
+			}
+
+		}
+		// De yen a pesos
+		// si el usuario escoje conversor de moneda y De yen a pesos
+		if (opcionSeleccionado == "Conversor de moneda" && opcionConversion == "De yen a pesos") {
+
+			while (true) {
+				String monedaConvertir = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+				try {
+					double moneda = Double.parseDouble(monedaConvertir);
+
+					operaciones yenPesos = new operaciones(moneda);
+					double conversion = yenPesos.yenPesos(moneda);
+					JOptionPane.showMessageDialog(null,
+							"El valor es: " + String.format("%.3f", conversion) + " pesos colombianos");
+					JOptionPane.showMessageDialog(null, "Gracias hasta luego");
+					System.exit(0);
+					break;
+				} catch (NumberFormatException e) {
+					JOptionPane.showMessageDialog(null, "Valor no válido, ingrese un número válido.");
+				}
+			}
+
+		}
+
+		// De won coreano a pesos
+		// si el usuario escoje conversor de moneda y De yen a pesos
+		if (opcionSeleccionado == "Conversor de moneda" && opcionConversion == "De won coreano a pesos") {
+
+			while (true) {
+				String monedaConvertir = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+				try {
+					double moneda = Double.parseDouble(monedaConvertir);
+
+					operaciones wonPesos = new operaciones(moneda);
+					double conversion = wonPesos.wonPesos(moneda);
+					JOptionPane.showMessageDialog(null,
+							"El valor es: " + String.format("%.3f", conversion) + " pesos colombianos");
+					JOptionPane.showMessageDialog(null, "Gracias hasta luego");
+					System.exit(0);
+					break;
+				} catch (NumberFormatException e) {
+					JOptionPane.showMessageDialog(null, "Valor no válido, ingrese un número válido.");
+				}
+			}
+
+		}
+
 	}
 
 }
