@@ -80,7 +80,7 @@ public class operaciones {
 		return cambio;
 	}
 
-	// De yen a pesos
+	// De won a pesos
 	public double wonPesos(double moneda) {
 		double tasaCambio = 23.64;
 		double cambio = moneda * tasaCambio;
